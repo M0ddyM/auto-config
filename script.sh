@@ -2,30 +2,23 @@
 
 
 echo "Updating system..."
-sudo apt update -y && sudo apt upgrade -y
+apt install -y update
 
 
 echo "Installing Python3 and pip..."
-sudo apt install -y python3 python3-pip
-
-
-echo "Creating a new user 'kashira' with sudo privileges..."
-sudo useradd -m -s /bin/bash -G sudo kashira
-echo "Setting default password for 'kashira'..."
-echo "kashira:3&Zm.x#?h3c2Qs@" | sudo chpasswd
+apt install -y python3 python3-pip
 
 
 echo "Installing XFCE desktop environment..."
-sudo apt install -y xfce4 xfce4-goodies
+apt install -y xfce4 xfce4-goodies
 
 
 echo "Installing LightDM display manager..."
-sudo apt install -y lightdm lightdm-gtk-greeter
-sudo systemctl enable lightdm
+apt install -y gdm3 
 
 
 echo "Installing qBittorrent..."
-sudo apt install -y qbittorrent
+apt install -y qbittorrent
 
 
 echo "Installing Google Chrome..."
